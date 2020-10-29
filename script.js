@@ -16,7 +16,7 @@ function writePassword() {
     alert("NUMBERS ONLY!")
   }
 
-  else if(input>128 || input< 8){
+  if(input>128 || input< 8){
     alert("Please enter a number between 8 and 128, or equal to 8 or 128")  
   }
   // if user inputs a valid number 
@@ -24,13 +24,13 @@ function writePassword() {
     if(confirm("Include Lower Case?")){
       list = list.concat(letters);
     }
-    else if(confirm("Include Upper Case?")){
+    if(confirm("Include Upper Case?")){
       list = list.concat(upperLetters);
     } 
-    else if(confirm("Include Numbers?")){
+    if(confirm("Include Numbers?")){
       list = list.concat(numbers);
     }
-    else if(confirm("Include Special Characters?")){
+    if(confirm("Include Special Characters?")){
       list = list.concat(symbols);
     }
   }
