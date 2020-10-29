@@ -16,7 +16,7 @@ function writePassword() {
   if (input>128 || input< 8){
     alert("Please enter a number between 8 and 128, or equal to 8 or 128")  
   }
-  if(input<129 && input>7){
+  else if(input<129 && input>7){
     if(confirm("Include Lower Case?")){
       list = list.concat(letters);
     }
