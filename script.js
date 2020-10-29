@@ -9,32 +9,37 @@ var forNaN = ["NaN"]
 function writePassword() {
   var list = [""]
   var input = prompt("Enter your desired password length. Minimum of 8 characters. Maximum length of 128 characters.")
+
+  // checking for faulty inputs
   if(isNaN(input)){
     list = list.concat(forNaN);
     alert("NUMBERS ONLY!")
   }
-  if (input>128 || input< 8){
+
+  else if(input>128 || input< 8){
     alert("Please enter a number between 8 and 128, or equal to 8 or 128")  
   }
+  // if user inputs a valid number 
   else if(input<129 && input>7){
     if(confirm("Include Lower Case?")){
       list = list.concat(letters);
     }
-    if(confirm("Include Upper Case?")){
+    else if(confirm("Include Upper Case?")){
       list = list.concat(upperLetters);
     } 
-    if(confirm("Include Numbers?")){
+    else if(confirm("Include Numbers?")){
       list = list.concat(numbers);
     }
-    if(confirm("Include Special Characters?")){
+    else if(confirm("Include Special Characters?")){
       list = list.concat(symbols);
     }
   }
+  // if user confirms no boxes
   if(list == "" && input<129 && input>7){
     alert("Please include at least one form of character")
 
   }
-  
+  // generating the actual password
   var password = ""
   for(i = 0; i < input; i++){
     password = password + list[Math.floor(Math.random()*list.length)]
