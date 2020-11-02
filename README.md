@@ -21,3 +21,10 @@ Each time the loop runs it generates a random character from the "master array" 
 The loop stops once it has run the same amount of times as the number that the user input into the first prompt.
 
 Once the password is generated it is displayed in the box on the page.
+
+enjoy the site: https://dtrombla.github.io/epic_password_generator/
+
+![password-application](https://github.com/DTrombla/images/blob/main/password-generator.PNG)
+
+
+![generated-password](https://github.com/DTrombla/images/blob/main/password.PNG)
